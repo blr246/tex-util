@@ -1,0 +1,36 @@
+\usepackage{fancyhdr}%
+\usepackage{fancyvrb}%
+
+% setup listings style
+\lstloadlanguages{Python}
+
+\definecolor{cppkeyword}{RGB}{16,164,32}
+\definecolor{cppcomment}{RGB}{52,120,154}
+\definecolor{cppstring}{RGB}{208,0,0}
+\definecolor{shadecolor}{gray}{0.1}
+\definecolor{filename}{RGB}{112,64,112}
+\definecolor{amber}{RGB}{163,139,0}
+
+\lstdefinestyle{pythonstd}{%
+  language         = Python,
+  basicstyle       = \tiny\ttfamily\color{black},
+  keywordstyle     = \bf\ttfamily\color{cppkeyword},
+  identifierstyle  = \bf\ttfamily\color{black},
+  commentstyle     = \bf\ttfamily\color{cppcomment},
+  stringstyle      = \bf\ttfamily\color{cppstring},
+  numberstyle      = \bfseries\color{black},
+  showstringspaces = false
+}{}
+
+\lstdefinestyle{pythonsmall}{%
+  basicstyle = \small\ttfamily\color{black}
+}{}
+
+\lstdefinestyle{console}{%
+  basicstyle   = \footnotesize\ttfamily, 
+  breaklines   = true,
+  columns      = fullflexible,
+  escapeinside = ||,
+  breakindent  = 0pt
+}
+

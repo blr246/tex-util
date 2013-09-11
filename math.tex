@@ -1,0 +1,120 @@
+\usepackage{amsmath}%
+\usepackage{amsfonts}%
+\usepackage{amssymb}%
+\usepackage{mathtools}%
+\usepackage{mathdots}%
+\usepackage{mathrsfs}%
+\usepackage{nicefrac}%
+\usepackage{breqn}%
+
+\usepackage{algorithm}%
+\usepackage{algpseudocode}%
+
+% smallmatrix alignment from
+%   http://www.latex-community.org/forum/viewtopic.php?f=46&t=7968
+\makeatletter
+% smallmatrix with left alignment
+\newenvironment{lsmallmatrix}{\null\,\vcenter\bgroup
+  \Let@\restore@math@cr\default@tag
+  \baselineskip6\ex@ \lineskip1.5\ex@ \lineskiplimit\lineskip
+  \ialign\bgroup$\m@th\scriptstyle##$\hfil&&\thickspace\hfil
+  $\m@th\scriptstyle##$\hfil\crcr
+}{%
+  \crcr\egroup\egroup\,%
+}
+% smallmatrix with right alignment
+\newenvironment{rsmallmatrix}{\null\,\vcenter\bgroup
+  \Let@\restore@math@cr\default@tag
+  \baselineskip6\ex@ \lineskip1.5\ex@ \lineskiplimit\lineskip
+  \ialign\bgroup\hfil$\m@th\scriptstyle##$&&\thickspace\hfil
+  $\m@th\scriptstyle##$\hfil\crcr
+}{%
+  \crcr\egroup\egroup\,%
+}
+\makeatother
+
+%% norm
+\providecommand{\norm}[1]{\ensuremath{\lVert#1\rVert}}
+%% abs
+\newcommand{\abs}[1]{\ensuremath{\lvert#1\rvert}}
+%% inverse
+\newcommand{\inv}[1]{\ensuremath{#1^{-1}}}
+%% transpose
+\newcommand{\T}[1]{\ensuremath{#1^T}}
+%% quadandquad
+\newcommand{\quadandquad}{\ensuremath{\quad \text{and} \quad}}
+%% quadtextquad
+\newcommand{\quadtextquad}[1]{\ensuremath{\quad \text{#1} \quad}}
+%% ddx
+\newcommand{\ddx}[1]{\ensuremath{\frac{\mathrm{d}}{\mathrm{d}#1}\;}}
+%% partialx
+\newcommand{\partialx}[1]{\ensuremath{\frac{\partial}{\partial{}#1}\;}}
+%% Prob
+\providecommand{\Prob}[1]{\ensuremath{P(#1)}}
+%% prob
+\providecommand{\prob}[1]{\ensuremath{p(#1)}}
+\providecommand{\probnd}[1]{\ensuremath{p(#1)}}
+%% Pcond
+\providecommand{\Pcond}[2]{\ensuremath{\Prob{#1\;\vert\;#2}}}
+%% pcond
+\providecommand{\pcond}[2]{\ensuremath{\prob{#1\;\vert\;#2}}}
+\providecommand{\pcondnd}[2]{\ensuremath{\probnd{#1\;\vert\;#2}}}
+%% Pcap
+\providecommand{\Pcap}[2]{\ensuremath{\Prob{#1\cap{}#2}}}
+%% ProbUnormPhi
+\providecommand{\ProbUnormPhi}[1]{\ensuremath{\tilde{P}_\Phi\left(#1\right)}}
+%% ProbUnorm
+\providecommand{\ProbUnorm}[1]{\ensuremath{\tilde{P}\left(#1\right)}}
+%% ProbUnormp
+\providecommand{\ProbUnormp}[1]{\ensuremath{\tilde{P}'\left(#1\right)}}
+%% Val
+\providecommand{\Val}[1]{\ensuremath{\mathrm{Val}\left(#1\right)}}
+%% idep
+\providecommand{\idep}[2]{\ensuremath{\left(#1\;\bot\;#2\right)}}
+%% condidep
+\providecommand{\condidep}[3]{\ensuremath{\left(#1\;\bot\;#2\;\vert\;#3\right)}}
+%% Pa
+\providecommand{\Pa}[1]{\ensuremath{\mathrm{Pa}\left(#1\right)}}
+%% Ch
+\providecommand{\Ch}[1]{\ensuremath{\mathrm{Ch}\left(#1\right)}}
+%% Nh
+\providecommand{\Nh}[1]{\ensuremath{\mathrm{Nh}\left(#1\right)}}
+%% Adj
+\providecommand{\Adj}[1]{\ensuremath{\mathrm{Adj}\left(#1\right)}}
+%% vstruct
+\providecommand{\vstruct}[3]{\ensuremath{#1 \rightarrow #2 \leftarrow #3}}
+%% indctr
+\providecommand{\indctr}[2]{\ensuremath{\mathbf{1}\{#1 = #2\}}}
+%% Markov network factor
+\providecommand{\Hfac}[2]{\ensuremath{\phi_{#1}\left(#2\right)}}
+%% scope
+\providecommand{\scope}[1]{\ensuremath{\mathrm{scope}\left(#1\right)}}
+%% assignIn
+\providecommand{\assignIn}[2]{\ensuremath{#1\left\langle{}#2\right\rangle{}}}
+%% Dir
+\providecommand{\Dir}[1]{\ensuremath{\mathrm{Dir}\left(#1\right)}}
+%% Mult
+\providecommand{\Mult}[1]{\ensuremath{\mathrm{Mult}\left(#1\right)}}
+%% Cat
+\providecommand{\Cat}[1]{\ensuremath{\mathrm{Cat}\left(#1\right)}}
+%% Beta
+\providecommand{\Beta}[2]{\ensuremath{\mathrm{Beta}\left(#1,#2\right)}}
+%% GammaFn
+\providecommand{\GammaFn}[1]{\ensuremath{\Gamma\left(#1\right)}}
+%% argmin
+\DeclareMathOperator*{\argmin}{arg\,min}
+%% argmax
+\DeclareMathOperator*{\argmax}{arg\,max}
+%% entropy
+\providecommand{\Hent}[1]{\ensuremath{%
+  H{\left(#1\right)}}}
+%% expectation
+\providecommand{\Expect}[2]{\ensuremath{%
+  \mathbb{E}_{#1}{\left(#2\right)}}}
+
+\providecommand{\sD}{\ensuremath{\mathcal{D}}}
+\providecommand{\sH}{\ensuremath{\mathcal{H}}}
+\providecommand{\sN}{\ensuremath{\mathcal{N}}}
+\providecommand{\sX}{\ensuremath{\mathcal{X}}}
+\providecommand{\bD}{\ensuremath{\boldsymbol{D}}}
+
